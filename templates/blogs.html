@@ -9,7 +9,7 @@
     {% else %}
         <ul>
             {% for blog in all_blogs %}
-            <li><h2><a href="/individual_blog">{{blog.name}} </a></h2></li>
+            <li><h2><a href="/individual_blog">{{blog.title}} </a></h2></li>
             <li><h4>{{blog.body}}</h4></li>
             <hr>
             {% endfor %}
