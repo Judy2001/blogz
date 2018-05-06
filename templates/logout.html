@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <center><h1>Blogz</h1></center>
+
+{% if name %}
+    <form><h3>Are you sure you want to logout?</h3></form>
+        <input type='submit' name='logout' value='Yes'>
+    </form>
+
+{% else %}
+    Not currently logged in.
+
+{% endif %}
+<br>
+{% endblock %}

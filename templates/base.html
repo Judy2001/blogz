@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>{{title}}</title>
+        <title><h1>Blogz</h1></title>
         <style type="text/css">
             .error {
                 color: red;
@@ -9,14 +9,18 @@
         </style>
     </head>
     <body>
-
-        <nav>
-            <a href='/'>Main Blog Page</a>
-            <span><a href='/new_post'>Add a Blog Entry</a></span>
-        </nav>     
-
-        {% block content %}
-        {% endblock %}
-
+        <div>
+            <table>
+                <td><a href="/signup">Create Account</a></td>
+                <td><a href="/login">Login</a></td>
+                <td><a href="/blog">Main Blog Page</a></td>
+                <td><a href="/new_post">Add a Blog Entry</a></td>
+                <td><a href="/">All Authors</a></td>
+                <td><a href="/single_user">Author Home Page</a></td>
+                <td><a href="/logout">Logout</a></td>
+            </table>
+        </div>     
     </body>
 </html>
+{% block content %}
+{% endblock %}
