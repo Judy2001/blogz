@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="index">
-        <h1>Authors</h1>
+  <div class="index">
+    <h1>Authors</h1>
+    <hr>
+    {% if users|length == 0 %}
+      <p>No users yet</p>
+    {% else %}
+      {% for user in users %}
+        <p class="users"> <a href="/blog?userid={{user.id}}">{{user.username}}</a></p>
         <hr>
-        {% for user in users %}
-            <p class="users"> <a href="/blog?userid={{user.id}}">{{user.username}}</a></p>
-            <hr>
-        {% endfor %}
-    </div>        
+      {% endfor %}
+    {% endif %}
+  </div>        
 {% endblock %}

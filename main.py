@@ -118,7 +118,7 @@ def blogs():
     blog_id = request.args.get('blog.id')
     user_id = request.args.get('userid')
     if blog_id:
-        posts = Blog.query.filter_by(id=blog_id).all()
+        posts = Blog.query.get(blog_id)
         return render_template('blog.html', all_blogs=posts)
     if user_id:
         blogs = Blog.query.filter_by(owner_id=user_id).all()

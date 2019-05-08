@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <center><h1>{{title}}</h1></center>
-    <p>{{body}}</p>
-    <p class='user'>Posted by: <a href="/blog?userid={{author.id}}">{{author}}</a></p>
+  <center><h1>{{title}}</h1></center>
+  <center><h3>{{body}}</h3></center>
+  <center><p class='user'>Posted by: <a href="/blog?userid={{author.id}}">{{author}}</a></p></center>
 {% endblock %}
